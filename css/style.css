@@ -5,6 +5,15 @@ body {
   overflow-x: hidden;
 }
 
+.inner-container {
+  padding: 15px;
+  background-color: #333;
+  color: #00FF00; /* Neon green text */
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+
 .layout_padding {
   padding: 90px 0;
 }
