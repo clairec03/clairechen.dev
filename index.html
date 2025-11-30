@@ -33,6 +33,81 @@
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 
+  <style>
+    /* Modern Navigation Styling */
+    .nav-item .nav-link {
+      position: relative;
+      padding: 8px 20px !important;
+      margin: 0 5px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+    
+    .nav-item .nav-link:hover {
+      background-color: rgba(0, 217, 255, 0.1);
+      border-color: #00d9ff;
+      transform: translateY(-2px);
+    }
+    
+    .nav-item.active .nav-link {
+      background-color: rgba(0, 217, 255, 0.15);
+      border-color: #00d9ff;
+      font-weight: 600;
+    }
+    
+    .nav-item:nth-child(2) .nav-link:hover {
+      background-color: rgba(124, 58, 237, 0.1);
+      border-color: #7c3aed;
+    }
+    
+    .nav-item:nth-child(3) .nav-link:hover {
+      background-color: rgba(255, 165, 0, 0.1);
+      border-color: #ffa500;
+    }
+
+    /* Scroll Indicator */
+    .scroll-indicator {
+      position: fixed;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+    }
+    
+    .scroll-indicator.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+    
+    .scroll-arrow {
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-top: 20px solid #00d9ff;
+      animation: bounce 2s infinite;
+      filter: drop-shadow(0 0 10px rgba(0, 217, 255, 0.5));
+    }
+    
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      40% {
+        transform: translateY(-15px);
+        opacity: 0.7;
+      }
+      60% {
+        transform: translateY(-8px);
+        opacity: 0.85;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
@@ -155,8 +230,7 @@
     <!-- end slider section -->
   </div>
 
-
-  <section class="service_section layout_padding">
+  <section class="service_section layout_padding" style="padding-top: 5px;">
     <div class="container">
       <div class="heading_container heading_center">
         <h2>
@@ -222,7 +296,7 @@
           <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 20px;">
             <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(255, 165, 0, 0.3);">English (Native)</span>
             <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(255, 165, 0, 0.3);">Mandarin Chinese (Native)</span>
-            <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(255, 165, 0, 0.3);">Spanish (Approximately B1/B2 level)</span>
+            <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(255, 165, 0, 0.3);">Spanish (B1/B2 level)</span>
           </div>
       </div>
     </div>
@@ -354,12 +428,52 @@
   </footer>
   <!-- footer section -->
 
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator" id="scrollIndicator">
+    <div class="scroll-arrow"></div>
+  </div>
+
   <!-- jQery -->
   <script src="js/jquery-3.4.1.min.js"></script>
   <!-- bootstrap js -->
   <script src="js/bootstrap.js"></script>
   <!-- custom js -->
   <script src="js/custom.js"></script>
+
+  <!-- Scroll Indicator Script -->
+  <script>
+    (function() {
+      let hasScrolled = false;
+      const scrollIndicator = document.getElementById('scrollIndicator');
+      
+      function checkScroll() {
+        if (!hasScrolled && window.scrollY > 100) {
+          hasScrolled = true;
+          scrollIndicator.classList.add('hidden');
+          window.removeEventListener('scroll', checkScroll);
+        }
+      }
+      
+      // Listen for scroll events
+      window.addEventListener('scroll', checkScroll);
+      
+      // Click handler for scroll indicator
+      scrollIndicator.addEventListener('click', function() {
+        window.scrollTo({
+          top: window.innerHeight * 0.8,
+          behavior: 'smooth'
+        });
+      });
+      
+      // Hide indicator after 10 seconds if no interaction
+      setTimeout(function() {
+        if (!hasScrolled) {
+          scrollIndicator.style.transition = 'opacity 1s ease';
+          scrollIndicator.classList.add('hidden');
+        }
+      }, 10000);
+    })();
+  </script>
 
 
 </body>

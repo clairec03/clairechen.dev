@@ -30,6 +30,40 @@
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 
+  <style>
+    /* Modern Navigation Styling */
+    .nav-item .nav-link {
+      position: relative;
+      padding: 8px 20px !important;
+      margin: 0 5px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+    
+    .nav-item .nav-link:hover {
+      background-color: rgba(0, 217, 255, 0.1);
+      border-color: #00d9ff;
+      transform: translateY(-2px);
+    }
+    
+    .nav-item.active .nav-link {
+      background-color: rgba(0, 217, 255, 0.15);
+      border-color: #00d9ff;
+      font-weight: 600;
+    }
+    
+    .nav-item:nth-child(2) .nav-link:hover {
+      background-color: rgba(124, 58, 237, 0.1);
+      border-color: #7c3aed;
+    }
+    
+    .nav-item:nth-child(3) .nav-link:hover {
+      background-color: rgba(255, 165, 0, 0.1);
+      border-color: #ffa500;
+    }
+  </style>
+
   <!-- D3.js for map visualization -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.20/topojson.min.js"></script>
