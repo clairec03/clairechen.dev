@@ -1,8 +1,10 @@
 $white: #ffffff;
 $black: #000000;
-$primary1: #03a7d3;
-$primary2: #ff4646;
-$textCol: #999;
+$primary1: #00d9ff;
+$primary2: #7c3aed;
+$textCol: #94a3b8;
+$darkBg: #0a0e27;
+$darkBg2: #1a1f3a;
 
 @mixin main-font {
   font-family: "Roboto", sans-serif;
@@ -30,8 +32,8 @@ $textCol: #999;
 
 body {
   @include main-font;
-  color: #0c0c0c;
-  background-color: #f8f8f8;
+  color: $white;
+  background-color: $darkBg;
   overflow-x: hidden;
 }
 
@@ -126,7 +128,7 @@ a:focus {
 /*header section*/
 .hero_area {
   position: relative;
-  background-color: #020230;
+  background-color: $darkBg;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -413,8 +415,9 @@ a:focus {
     align-items: center;
     text-align: center;
     padding: 25px;
-    background-color: #fafafa;
-    box-shadow: 0 0 5px 0 rgba($color: #000000, $alpha: .15);
+    background-color: $darkBg2;
+    box-shadow: 0 0 20px 0 rgba($color: $primary1, $alpha: .15);
+    border: 1px solid rgba($color: $primary1, $alpha: .2);
 
     .img-box {
       width: 75px;
@@ -465,7 +468,7 @@ a:focus {
 // server section
 
 .server_section {
-  background: linear-gradient(110deg, transparent 25%, #020230 25%);
+  background: linear-gradient(110deg, transparent 25%, $darkBg2 25%);
   padding: 55px 0;
   color: $white;
 
@@ -790,7 +793,7 @@ a:focus {
 
 /* info section */
 .info_section {
-  background-color: #020230;
+  background-color: $darkBg2;
   color: $white;
 
   h4 {
@@ -892,7 +895,7 @@ a:focus {
 
 .footer_section {
   position: relative;
-  background-color: #020230;
+  background-color: $darkBg;
   text-align: center;
 
   p {
@@ -908,3 +911,61 @@ a:focus {
 }
 
 // end footer section
+
+// projects gallery section
+.projects_section {
+  .project-card {
+    background-color: $darkBg2;
+    border: 1px solid rgba($color: $primary1, $alpha: .2);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    height: 100%;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba($color: $primary1, $alpha: .3);
+      border-color: rgba($color: $primary1, $alpha: .5);
+    }
+
+    h3 {
+      color: $primary1;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 15px 0;
+
+      .tech-tag {
+        background-color: rgba($color: $primary2, $alpha: .2);
+        color: $primary2;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 600;
+      }
+    }
+
+    p {
+      color: $textCol;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      color: $textCol;
+      padding-left: 20px;
+
+      li {
+        margin-bottom: 8px;
+        line-height: 1.6;
+      }
+    }
+  }
+}

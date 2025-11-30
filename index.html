@@ -18,7 +18,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
   <link rel="manifest" href="favicon/site.webmanifest" />
 
-  <title>Claire Chen</title>
+  <title></title>
 
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 
@@ -42,8 +42,8 @@
     <header class="header_section">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="index.html">
-            <span>Claire Chen</span>
+          <a class="navbar-brand" href="index.html" style="padding: 0;">
+            <img src="favicon/web-app-manifest-192x192.png" alt="Logo" style="height: 50px; width: auto; border-radius: 8px; object-fit: cover;">
           </a>
 
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,10 +56,10 @@
                 <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="blog.html"> Blog</a>
+                <a class="nav-link" href="footprint.html"> Global Footprint</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="portfolio.html"> Portfolio</a>
+                <a class="nav-link" href="projects.html"> Projects</a>
               </li>
             </ul>
           </div>
@@ -69,50 +69,86 @@
     <!-- end header section -->
     <!-- slider section -->
     <section class="slider_section ">
-      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="detail-box">
-                    <h1>
-                      Claire Chen <br>
-                      Software Engineer
-                    </h1>
-                    <p> Hello! I'm Claire, a passionate Software Engineer with a major in Computer Science and concentrations in Machine Learning and Security &amp; Privacy from Carnegie Mellon University. I thrive on tackling complex problems and creating innovative solutions. </p>
-                    <div class="btn-box">
-                      <a href="" class="btn-1">
-                        Read More
-                      </a>
-                      <!-- <a href="resume_claire_chen.pdf" class="btn-2">
-                        Download Resume
-                      </a> -->
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="row">
-                    <div class=" col-lg-10 mx-auto">
-                      <div class="img-box">
-                        <img src="images/claire_grad_photo.jpg" alt="Claire's Headshot" width="75%">
-                      </div>
-                    </div>
-                  </div>
-                </div>
+      <div class="container" style="padding-top: 5px; padding-bottom: 60px;">
+        <div class="row" style="align-items: flex-start;">
+          <!-- Left Column: Photo and Contact Info -->
+          <div class="col-md-4">
+            <div style="text-align: center;">
+              <img src="images/claire_headshot_cropped.jpg" alt="Claire Chen" style="width: 250px; height: 250px; border-radius: 8px; object-fit: cover; margin-bottom: 25px;">
+              
+              <div style="background-color: #1a1f3a; padding: 25px; border-radius: 8px; text-align: left;">
+                <p style="color: #94a3b8; font-size: 14px; line-height: 1.6; margin-bottom: 15px;">
+                  <strong style="color: #ffffff;">Software Engineer</strong><br>
+                  Microsoft<br>
+                  Azure Core HPC/AI Training Platform<br><br>
+                  <strong style="color: #ffffff;">Usable Privacy and Security Researcher (Previously)</strong><br>
+                  CMU CyLab Security & Privacy<br>
+                  Published in ACM CHI '24
+                  <br><br>
+                  <strong style="color: #ffffff;">Head Teaching Assistant (Previously)</strong><br>
+                  15-330/18-330 Introduction to Computer Security<br>
+                  Carnegie Mellon University
+                </p>
+                <hr style="border-color: rgba(0, 217, 255, 0.3); margin: 20px 0;">
+                <p style="color: #94a3b8; font-size: 14px; margin-bottom: 8px;">
+                  <i class="fa fa-envelope" style="color: #00d9ff; margin-right: 8px;"></i>
+                  <a href="mailto:ccz@alumni.cmu.edu" style="color: #94a3b8;">ccz@alumni.cmu.edu</a>
+                </p>
+                <p style="color: #94a3b8; font-size: 14px; margin-bottom: 8px;">
+                  <i class="fa fa-file-text" style="color: #00d9ff; margin-right: 8px;"></i>
+                  <a href="files/ClaireChen_Resume.pdf" style="color: #94a3b8;">Resume</a>
+                </p>
+                <p style="color: #94a3b8; font-size: 14px; margin-bottom: 8px;">
+                  <i class="fa fa-graduation-cap" style="color: #00d9ff; margin-right: 8px;"></i>
+                  <a href="https://scholar.google.com/citations?hl=en&user=VrVREu0AAAAJ" target="_blank" style="color: #94a3b8;">Google Scholar</a>
+                </p>
+                <p style="color: #94a3b8; font-size: 14px; margin-bottom: 8px;">
+                  <i class="fa fa-linkedin" style="color: #00d9ff; margin-right: 8px;"></i>
+                  <a href="https://www.linkedin.com/in/clairecch/" target="_blank" style="color: #94a3b8;">LinkedIn</a>
+                </p>
+                <p style="color: #94a3b8; font-size: 14px;">
+                  <i class="fa fa-github" style="color: #00d9ff; margin-right: 8px;"></i>
+                  <a href="https://github.com/clairec03/" target="_blank" style="color: #94a3b8;">GitHub</a>
+                </p>
               </div>
             </div>
           </div>
-        </div>
-        <div class="carousel_btn-box">
-          <a class="carousel-control-prev" href="#customCarousel1" role="button" data-slide="prev">
-            <i class="fa fa-angle-left" aria-hidden="true"></i>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#customCarousel1" role="button" data-slide="next">
-            <i class="fa fa-angle-right" aria-hidden="true"></i>
-            <span class="sr-only">Next</span>
-          </a>
+          
+          <!-- Right Column: Bio and Information -->
+          <div class="col-md-8">
+            <h1 style="color: #ffffff; font-size: 36px; font-weight: 700; margin-bottom: 5px;">
+              Claire Chen
+            </h1>
+
+            <h4 style="color: #00d9ff; font-size: 24px; margin-bottom: 25px;">(陈宸)</h4>
+
+            <p style="color: #94a3b8; font-size: 16px; line-height: 1.8; margin-bottom: 25px;">
+              Software engineer and researcher focused on AI infrastructure, high-performance computing, and security. Building scalable systems, passionate about leading technical initiatives, and contributing to creating inclusive, human-centered technology. Studied in 4 countries and traveled to 23, I bring a global perspective to solving complex challenges at the intersection of AI, systems, and security.
+            </p>
+
+            <div style="color: #94a3b8; font-size: 15px; line-height: 2.0; margin-bottom: 30px;">
+
+              <p style="margin-bottom: 3px;"><strong style="color: #ffffff;">Career Coach</strong></p>
+              <p style="margin-bottom: 18px;">I support aspiring technologists in achieving their career goals</p>
+              
+              <p style="margin-bottom: 3px;"><strong style="color: #ffffff;">Seeking:</strong> Co-founders for AI-focused startups</p>
+            </div>
+            
+            <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+              <a href="https://scholar.google.com/citations?hl=en&user=VrVREu0AAAAJ" target="_blank" style="background-color: #7c3aed; color: #ffffff; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: 600; display: inline-block;">
+                Publications
+              </a>
+              <a href="projects.html" style="background-color: #1a1f3a; color: #ffffff; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: 600; display: inline-block; border: 2px solid #00d9ff;">
+                View Projects
+              </a>
+              <a href="https://www.joinleland.com/coach/claire-c-2" target="_blank" style="background-color: #1a1f3a; color: #ffffff; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: 600; display: inline-block; border: 2px solid #7c3aed;">
+                Get Coaching
+              </a>
+              <a href="mailto:ccz@alumni.cmu.edu" style="background-color: #00d9ff; color: #0a0e27; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: 600; display: inline-block;">
+                Contact Me
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -124,80 +160,70 @@
     <div class="container">
       <div class="heading_container heading_center">
         <h2>
-          Skills &amp; Experience
+          Research & Technical Expertise
         </h2>
+        <p style="color: #94a3b8; margin-top: 15px;">
+          Bridging high-performance computing, AI/ML systems, and security research
+        </p>
       </div>
     </div>
     
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <!-- Projects container 1 starts here -->
-          <h4>
+          <h4 style="color: #ffffff; margin-bottom: 20px;">
             Programming Languages
           </h4>
-          <div class="row">
-            <div class="col-12">
-              <div class="inner-container">
-                <div class="row">
-                  <div class="col-6">
-                    <!-- Content for the first column -->
-                    <ul class="no-bullets">
-                      <li>C</li>
-                      <li>C++</li>
-                      <li>SML</li>
-                      <li>Rust</li>
-                      <li>Arduino</li>
-                      <li>R</li>
-                    </ul>
-                  </div>
-                  <div class="col-6">
-                    <!-- Content for the second column -->
-                    <ul class="no-bullets">
-                      <li>Python</li>
-                      <li>x86/x64</li>
-                      <li>Go</li>
-                      <li>Java</li>
-                      <li>Dafny</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          <!-- Projects container 1 ends here -->
+          <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 40px;">
+            <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(0, 217, 255, 0.3);">C</span>
+            <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(0, 217, 255, 0.3);">C++</span>
+            <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(0, 217, 255, 0.3);">Python</span>
+            <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(0, 217, 255, 0.3);">Go</span>
+            <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(0, 217, 255, 0.3);">Rust</span>
+            <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(0, 217, 255, 0.3);">Java</span>
+            <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(0, 217, 255, 0.3);">R</span>
+            <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(0, 217, 255, 0.3);">SQL</span>
+            <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(0, 217, 255, 0.3);">JavaScript</span>
+            <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(0, 217, 255, 0.3);">x86/x64 Assembly</span>
+            <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(0, 217, 255, 0.3);">SML</span>
+            <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(0, 217, 255, 0.3);">Dafny</span>
+          </div>
         </div>
+        
         <div class="col-12">
-          <!-- Projects container 2 starts here -->
-          <h4>
-            Technologies
+          <h4 style="color: #ffffff; margin-bottom: 20px;">
+            Technologies & Frameworks
           </h4>
-          <div class="row">
-            <div class="col-12">
-              <div class="inner-container">
-                <div class="row">
-                  <div class="col-6">
-                    <!-- Content for the first column -->
-                    <ul class="no-bullets">
-                      <li>Spark</li>
-                      <li>NumPy</li>
-                      <li>OpenMP</li>
-                      <li>MPI</li>
-                    </ul>
-                  </div>
-                  <div class="col-6">
-                    <!-- Content for the second column -->
-                    <ul class="no-bullets">
-                      <li>PyTorch</li>
-                      <li>Pandas</li>
-                      <li>OpenCV</li>
-                    </ul>
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-          <!-- Projects container 2 ends here -->
+          <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 20px;">
+            <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(124, 58, 237, 0.3);">PyTorch</span>
+            <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(124, 58, 237, 0.3);">TensorFlow</span>
+            <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(124, 58, 237, 0.3);">Apache Spark</span>
+            <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(124, 58, 237, 0.3);">NumPy</span>
+            <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(124, 58, 237, 0.3);">Pandas</span>
+            <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(124, 58, 237, 0.3);">Scikit-learn</span>
+            <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(124, 58, 237, 0.3);">OpenCV</span>
+            <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(124, 58, 237, 0.3);">CUDA</span>
+            <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(124, 58, 237, 0.3);">OpenMP</span>
+            <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(124, 58, 237, 0.3);">MPI</span>
+            <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(124, 58, 237, 0.3);">Azure</span>
+            <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(124, 58, 237, 0.3);">AWS</span>
+            <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(124, 58, 237, 0.3);">Databricks</span>
+            <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(124, 58, 237, 0.3);">Docker</span>
+            <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(124, 58, 237, 0.3);">Git</span>
+            <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(124, 58, 237, 0.3);">Linux</span>
+            <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(124, 58, 237, 0.3);">Power BI</span>
+          </div>
         </div>
+
+        <div class="col-12">
+          <h4 style="color: #ffffff; margin-bottom: 20px;">
+            Human Languages
+        </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 20px;">
+            <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(255, 165, 0, 0.3);">English (Native)</span>
+            <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(255, 165, 0, 0.3);">Mandarin Chinese (Native)</span>
+            <span style="background-color: #1a1f3a; color: #ffffff; padding: 10px 20px; border-radius: 25px; font-size: 14px; border: 1px solid rgba(255, 165, 0, 0.3);">Spanish (Approximately B1/B2 level)</span>
+          </div>
       </div>
     </div>
     </section>
@@ -213,13 +239,15 @@
           <div class="detail-box">
             <div class="heading_container">
               <h2>
-                Technical Projects
+                Research Interests
               </h2>
-            <p>
-              Info about my technical projects
+            <p style="color: #94a3b8; margin-top: 15px; line-height: 1.8; font-size: 15px;">
+              <strong style="color: #00d9ff;">AI/ML Infrastructure:</strong> Building performance monitoring and predictive ML systems for AI supercomputing clusters (NVIDIA H100/GB200). Expertise in large-scale data engineering with Spark and real-time telemetry.<br><br>
+              <strong style="color: #00d9ff;">Systems & HPC:</strong> Operating systems design, parallel algorithms (OpenMP/MPI/CUDA), GPU computing, and performance optimization for distributed systems.<br><br>
+              <strong style="color: #00d9ff;">Usable Security & Privacy:</strong> Published research on IoT security labels influencing FCC policy. Human-computer interaction and privacy engineering.
             </p>
-              <a href="">
-              Read More
+              <a href="projects.html">
+              View Projects
               </a>
             </div>
           </div>
@@ -235,43 +263,6 @@
   </section>
 
   <!-- end about section -->
-
-
-  <!-- server section -->
-
-  <section class="server_section">
-    <div class="container ">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="img-box">
-            <img src="images/server-img.jpg" alt="">
-            <div class="play_btn">
-              <button>
-                <i class="fa fa-play" aria-hidden="true"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="detail-box">
-            <div class="heading_container">
-              <h2>
-                Leadership Experience
-              </h2>
-              <p>
-              Info about my leadership experience
-              </p>
-            </div>
-            <a href="">
-              Read More
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end server section -->
 
   <!-- info section -->
   <section class="info_section layout_padding2">
@@ -289,10 +280,10 @@
                   Princeton, NJ
                 </span>
               </a> -->
-              <a href="mailto:clairechen@cmu.edu">
+              <a href="mailto:ccz@alumni.cmu.edu">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
                 <span>
-                  clairechen@cmu.edu
+                  ccz@alumni.cmu.edu
                 </span>
               </a>
               <a href="mailto:root@clairechen.dev">
@@ -304,10 +295,10 @@
             </div>
           </div>
           <div class="info_social">
-            <a href="https://www.linkedin.com/in/clairecch/">
+            <a href="https://www.linkedin.com/in/clairecch/" target="_blank">
               <i class="fa fa-linkedin" aria-hidden="true"></i>
             </a>
-            <a href="https://github.com/clairec03/">
+            <a href="https://github.com/clairec03/" target="_blank">
               <i class="fa fa-github" aria-hidden="true"></i>
             </a>
           </div>
@@ -318,13 +309,30 @@
               Links
             </h4>
             <div class="info_links">
-              <a class="" href="blog.html">
+              <a class="" href="footprint.html">
                 <img src="images/nav-bullet.png" alt="">
-                Blog
+                Global Footprint
               </a>
-              <a class="" href="portfolio.html">
+              <a class="" href="projects.html">
                 <img src="images/nav-bullet.png" alt="">
-                Portfolio
+                Projects
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_link_box">
+            <h4>
+              Professional
+            </h4>
+            <div class="info_links">
+              <a class="" href="https://scholar.google.com/citations?hl=en&user=VrVREu0AAAAJ" target="_blank">
+                <img src="images/nav-bullet.png" alt="">
+                Google Scholar
+              </a>
+              <a class="" href="https://www.joinleland.com/coach/claire-c-2" target="_blank">
+                <img src="images/nav-bullet.png" alt="">
+                Career Coaching
               </a>
             </div>
           </div>

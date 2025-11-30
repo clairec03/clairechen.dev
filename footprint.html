@@ -13,7 +13,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Hostit</title>
+  <title>Global Footprint - Claire Chen</title>
 
 
   <!-- bootstrap core css -->
@@ -30,6 +30,11 @@
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 
+  <!-- D3.js for map visualization -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.20/topojson.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/datamaps/0.5.9/datamaps.world.min.js"></script>
+
 </head>
 
 <body class="sub_page">
@@ -39,8 +44,8 @@
         <header class="header_section">
           <div class="container-fluid">
             <nav class="navbar navbar-expand-lg custom_nav-container ">
-              <a class="navbar-brand" href="index.html">
-                <span>Claire Chen</span>
+              <a class="navbar-brand" href="index.html" style="padding: 0;">
+                <img src="favicon/web-app-manifest-192x192.png" alt="Logo" style="height: 50px; width: auto; border-radius: 8px; object-fit: cover;">
               </a>
     
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,10 +58,10 @@
                     <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="blog.html"> Blog</a>
+                    <a class="nav-link" href="footprint.html"> Global Footprint</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="portfolio.html"> Portfolio</a>
+                    <a class="nav-link" href="projects.html"> Projects</a>
                   </li>
                 </ul>
               </div>
@@ -66,36 +71,43 @@
         <!-- end header section -->
   </div>
 
-  <!-- about section -->
+  <!-- global footprint section -->
 
-  <section class="about_section layout_padding">
-    <div class="container  ">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="detail-box">
-            <div class="heading_container">
-              <h2>
-                Projects
-              </h2>
-            </div>
-            <p>
-            Coming soon</p>
-            <a href="">
-              Read More
-            </a>
-          </div>
-        </div>
-        <div class="col-md-6 ">
-          <div class="img-box">
-            <img src="images/about-img.png" alt="">
-          </div>
-        </div>
+  <section class="service_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          My Global Footprint
+        </h2>
+        <p style="color: #94a3b8; margin-top: 15px; font-size: 16px;">
+          <span id="country-count" style="color: #00d9ff; font-weight: bold;">23</span> countries visited across <span style="color: #7c3aed; font-weight: bold;">5</span> continents
+        </p>
+      </div>
+    </div>
 
+    <!-- Map Container -->
+    <div class="container" style="margin-top: 50px;">
+      <div id="world-map" style="position: relative; width: 100%; height: 600px; background-color: #0a0e27; border-radius: 12px; border: 2px solid rgba(0, 217, 255, 0.2);"></div>
+    </div>
+
+    <!-- Country Grid (Optional: shows visited countries as cards) -->
+    <div class="container" style="margin-top: 60px;">
+      <h3 style="color: #ffffff; text-align: center; margin-bottom: 30px;">Countries Visited</h3>
+      <div id="countries-grid" style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
+        <!-- Countries will be dynamically added here -->
+      </div>
+      
+      <!-- Legend -->
+      <div style="text-align: center; margin-top: 40px; padding: 20px;">
+        <p style="color: #94a3b8; font-size: 14px;">
+          ⭐ = studied in
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- end about section -->
+  <!-- end global footprint section -->
+
   <!-- info section -->
   <section class="info_section layout_padding2">
     <div class="container">
@@ -112,10 +124,10 @@
                   Princeton, NJ
                 </span>
               </a> -->
-              <a href="mailto:clairechen@cmu.edu">
+              <a href="mailto:ccz@alumni.cmu.edu">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
                 <span>
-                  clairechen@cmu.edu
+                  ccz@alumni.cmu.edu
                 </span>
               </a>
               <a href="mailto:root@clairechen.dev">
@@ -144,13 +156,13 @@
               Links
             </h4>
             <div class="info_links">
-              <a class="active" href="blog.html">
+              <a class="active" href="footprint.html">
                 <img src="images/nav-bullet.png" alt="">
-                Blog
+                Global Footprint
               </a>
-              <a class="" href="portfolio.html">
+              <a class="" href="projects.html">
                 <img src="images/nav-bullet.png" alt="">
-                Portfolio
+                Projects
               </a>
             </div>
           </div>
@@ -177,6 +189,9 @@
   <script src="js/bootstrap.js"></script>
   <!-- custom js -->
   <script src="js/custom.js"></script>
+
+  <!-- Interactive Map Script -->
+  <script src="js/footprint-map.js"></script>
 
 
 </body>
